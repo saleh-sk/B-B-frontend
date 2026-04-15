@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "fullName": "Samir Benali",
+    "username": "sbenali",
+    "role": "admin",
+    "email": "samir.benali@company.com",
+    "password": "Admin@2026",
+    "address": "12 Rue Emir Abdelkader, Algiers",
+    "phoneNumber": "+213555010101"
+  },
+  {
+    "id": 2,
+    "fullName": "Nadia Cherif",
+    "username": "ncherif",
+    "role": "warehouse_employee",
+    "email": "nadia.cherif@company.com",
+    "password": "WareHouse#22",
+    "address": "45 Boulevard Zighout Youcef, Oran",
+    "phoneNumber": "+213666020202"
+  },
+  {
+    "id": 3,
+    "fullName": "Yacine Boudiaf",
+    "username": "yboudiaf",
+    "role": "logistics_manager",
+    "email": "yacine.boudiaf@company.com",
+    "password": "Logistics$23",
+    "address": "78 Avenue Mohammed V, Constantine",
+    "phoneNumber": "+213777030303"
+  },
+  {
+    "id": 4,
+    "fullName": "Amel Khelifi",
+    "username": "akhelifi",
+    "role": "warehouse_employee",
+    "email": "amel.khelifi@company.com",
+    "password": "WareHouse#24",
+    "address": "15 Rue de la Liberté, Annaba",
+    "phoneNumber": "+213888040404"
+  },
+  {
+    "id": 5,
+    "fullName": "Rachid Belkacem",
+    "username": "rbelkacem",
+    "role": "admin",
+    "email": "rachid.belkacem@company.com",
+    "password": "Admin@2026",
+    "address": "90 Boulevard de la République, Blida",
+    "phoneNumber": "+213999050505"
+  },
+  {
+    "id": 6,
+    "fullName": "Sofia Amrani",
+    "username": "samrani",
+    "role": "logistics_manager",
+    "email": "sofia.amrani@company.com",
+    "password": "Logistics$26",
+    "address": "100 Rue de la Paix, Tizi Ouzou",
+    "phoneNumber": "+213111060606"
+  }
+]

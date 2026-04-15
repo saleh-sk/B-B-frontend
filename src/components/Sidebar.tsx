@@ -1,19 +1,19 @@
-import { ChevronDown } from 'lucide-react'
+import { ChevronDown, House } from 'lucide-react'
 import { useState, type ReactNode } from 'react'
-import { NavLink, useLocation } from 'react-router'
+import { Link, NavLink, useLocation } from 'react-router'
 import type { LucideIcon } from 'lucide-react'
 
 type SidebarItemType = 'link' | 'submenu'
 
 interface SidebarBaseItem {
   label: string
-  url: string
   type: SidebarItemType
 }
 
 export interface SidebarLinkItem extends SidebarBaseItem {
   type: 'link'
-  icon?: never
+  icon?: LucideIcon
+  url: string
 }
 
 export interface SidebarSubmenuItem extends SidebarBaseItem {
@@ -70,6 +70,7 @@ const Sidebar = ({ items, logo, className = '' }: SidebarProps) => {
       <nav className='mt-1 flex-1 overflow-y-auto'>
         <ul className='space-y-1'>
           {items.map(item => {
+            const Icon = item.icon
             if (item.type === 'link') {
               return (
                 <li key={item.label}>
@@ -79,14 +80,16 @@ const Sidebar = ({ items, logo, className = '' }: SidebarProps) => {
                       `${baseLinkClasses} ${linkStateClasses} ${isActive ? activeLinkClasses : ''}`
                     }
                   >
-                    <span className='h-1.5 w-1.5 rounded-full bg-stone-500/75 dark:bg-stone-400' />
+                    {Icon ? (
+                      <Icon className='h-5 w-5 shrink-0' />
+                    ) : (
+                      <span className='h-1.5 w-1.5 rounded-full bg-stone-500/75 dark:bg-stone-400' />
+                    )}
                     <span className='pl-1'>{item.label}</span>
                   </NavLink>
                 </li>
               )
             }
-
-            const Icon = item.icon
 
             const submenuActive = item.children.some(
               child => child.url === location.pathname,
@@ -106,7 +109,7 @@ const Sidebar = ({ items, logo, className = '' }: SidebarProps) => {
                   className={`${baseLinkClasses} ${linkStateClasses} ${submenuActive ? activeLinkClasses : ''}`}
                   aria-expanded={isOpen}
                 >
-                  <Icon className='h-5 w-5 shrink-0' />
+                  {Icon && <Icon className='h-5 w-5 shrink-0' />}
                   <span>{item.label}</span>
                   <ChevronDown
                     className={`ml-auto h-4 w-4 transition ${isOpen ? 'rotate-180' : ''}`}
@@ -146,6 +149,13 @@ const Sidebar = ({ items, logo, className = '' }: SidebarProps) => {
           })}
         </ul>
       </nav>
+
+      <div className='border-t border-stone-300/40 pt-3 dark:border-stone-700/60'>
+        <Link to='/' className={`${baseLinkClasses} ${linkStateClasses}`}>
+          <House className='h-5 w-5 shrink-0' />
+          <span className='pl-1'>Home Page</span>
+        </Link>
+      </div>
     </aside>
   )
 }

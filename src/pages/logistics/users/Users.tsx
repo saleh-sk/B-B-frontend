@@ -116,7 +116,7 @@ const Users = () => {
               onChange={event =>
                 setSelectedRole(event.target.value as 'all' | UserRole)
               }
-              className='w-full rounded-xl border border-stone-300 bg-white px-10 py-2.5 text-sm text-stone-900 shadow-sm outline-none transition-all hover:border-stone-400 focus:border-stone-700 focus:ring-4 focus:ring-stone-700/10 dark:border-stone-700 dark:bg-stone-900 dark:text-stone-100 dark:hover:border-stone-600 dark:focus:border-stone-300 dark:focus:ring-stone-300/15'
+              className='w-full rounded-xl border border-stone-300 appearance-none bg-white px-10 py-2.5 text-sm text-stone-900 shadow-sm outline-none transition-all hover:border-stone-400 focus:border-stone-700 focus:ring-4 focus:ring-stone-700/10 dark:border-stone-700 dark:bg-stone-900 dark:text-stone-100 dark:hover:border-stone-600 dark:focus:border-stone-300 dark:focus:ring-stone-300/15'
             >
               <option value='all'>All Roles</option>
               {Object.entries(roleLabel).map(([role, label]) => (

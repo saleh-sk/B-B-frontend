@@ -5,7 +5,7 @@ import Login from './pages/Login'
 import { useAppSelector } from './store/hooks'
 import Layout from './components/Layout'
 import Home from './pages/Home'
-import Logistics from './pages/logistics/Logistics'
+import LogisticsDashboard from './pages/logistics/LogisticsDashboard'
 import PageLayout from './components/PageLayout'
 import AddUser from './pages/logistics/users/AddUser'
 import EditUser from './pages/logistics/users/EditUser'
@@ -13,7 +13,11 @@ import Users from './pages/logistics/users/Users'
 import Categories from './pages/logistics/categories/Categories'
 import EditCategory from './pages/logistics/categories/EditCategory'
 import AddCategory from './pages/logistics/categories/AddCategory'
-import { logisticsSidebarItems } from './constants'
+import WarehouseDashboard from './pages/warehouse/WarehouseDashboard'
+import Products from './pages/warehouse/products/Products'
+import AddProduct from './pages/warehouse/products/AddProduct'
+import PendingPricing from './pages/warehouse/PendingPricing'
+import { logisticsSidebarItems, warehouseSidebarItems } from './constants'
 
 const SectionPage = ({ title }: { title: string }) => {
   return (
@@ -44,7 +48,7 @@ function App() {
             path='logistics'
             element={<PageLayout sidebarItems={logisticsSidebarItems} />}
           >
-            <Route index element={<Logistics />} />
+            <Route index element={<LogisticsDashboard />} />
             <Route path='users'>
               <Route index element={<Users />} />
               <Route path='add' element={<AddUser />} />
@@ -56,6 +60,18 @@ function App() {
               <Route path='add' element={<AddCategory />} />
               <Route path='edit/:id' element={<EditCategory />} />
             </Route>
+          </Route>
+
+          <Route
+            path='warehouse'
+            element={<PageLayout sidebarItems={warehouseSidebarItems} />}
+          >
+            <Route index element={<WarehouseDashboard />} />
+            <Route path='products'>
+              <Route index element={<Products />} />
+              <Route path='add' element={<AddProduct />} />
+            </Route>
+            <Route path='pending-pricing' element={<PendingPricing />} />
           </Route>
 
           <Route index element={<Home />} />

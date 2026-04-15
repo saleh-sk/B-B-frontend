@@ -1,0 +1,27 @@
+[
+  {
+    "name": "PlayStation 5",
+    "category": "Electronics",
+    "id": "PS5-001"
+  },
+  {
+    "name": "Apple iPhone 13",
+    "category": "Electronics",
+    "id": "IP13-002"
+  },
+  {
+    "name": "Nike Air Max 270",
+    "category": "Clothing",
+    "id": "AM270-003"
+  },
+  {
+    "name": "Instant Pot Duo 7-in-1",
+    "category": "Home & Kitchen",
+    "id": "IPD-004"
+  },
+  {
+    "name": "The Great Gatsby",
+    "category": "Books",
+    "id": "GG-005"
+  }
+]

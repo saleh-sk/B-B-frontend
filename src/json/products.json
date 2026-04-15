@@ -1,0 +1,105 @@
+[
+  {
+    "name": "PlayStation 5",
+    "category": "Electronics",
+    "id": "PS5-001"
+  },
+  {
+    "name": "Apple iPhone 13",
+    "category": "Electronics",
+    "id": "IP13-002"
+  },
+  {
+    "name": "Nike Air Max 270",
+    "category": "Clothing",
+    "id": "AM270-003"
+  },
+  {
+    "name": "Instant Pot Duo 7-in-1",
+    "category": "Home & Kitchen",
+    "id": "IPD-004"
+  },
+  {
+    "name": "The Great Gatsby",
+    "category": "Books",
+    "id": "GG-005"
+  },
+  {
+    "name": "PlayStation 5",
+    "category": "Electronics",
+    "id": "PS5-001",
+    "quantity": 10
+  },
+  {
+    "name": "Apple iPhone 13",
+    "category": "Electronics",
+    "id": "IP13-002",
+    "quantity": 15
+  },
+  {
+    "name": "Nike Air Max 270",
+    "category": "Clothing",
+    "id": "AM270-003",
+    "quantity": 20
+  },
+  {
+    "name": "Instant Pot Duo 7-in-1",
+    "category": "Home & Kitchen",
+    "id": "IPD-004",
+    "quantity": 5
+  },
+  {
+    "name": "The Great Gatsby",
+    "category": "Books",
+    "id": "GG-005",
+    "quantity": 8
+  },
+  {
+    "name": "Samsung Galaxy S21",
+    "category": "Electronics",
+    "id": "SGS21-006",
+    "quantity": 12
+  },
+  {
+    "name": "Adidas Ultraboost 21",
+    "category": "Clothing",
+    "id": "UB21-007",
+    "quantity": 18
+  },
+  {
+    "name": "Dyson V11 Vacuum Cleaner",
+    "category": "Home & Kitchen",
+    "id": "DV11-008",
+    "quantity": 7
+  },
+  {
+    "name": "To Kill a Mockingbird",
+    "category": "Books",
+    "id": "TKAM-009",
+    "quantity": 10
+  },
+  {
+    "name": "Sony WH-1000XM4",
+    "category": "Electronics",
+    "id": "WH1000XM4-010",
+    "quantity": 20
+  },
+  {
+    "name": "Levi's 501 Original Fit Jeans",
+    "category": "Clothing",
+    "id": "L501-011",
+    "quantity": 25
+  },
+  {
+    "name": "KitchenAid Artisan Stand Mixer",
+    "category": "Home & Kitchen",
+    "id": "KASM-012",
+    "quantity": 6
+  },
+  {
+    "name": "1984 by George Orwell",
+    "category": "Books",
+    "id": "1984-013",
+    "quantity": 15
+  }
+]

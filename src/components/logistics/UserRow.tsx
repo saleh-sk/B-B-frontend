@@ -1,5 +1,5 @@
 import { Link } from 'react-router'
-import { Pencil, Trash2 } from 'lucide-react'
+import { UserRoundPen, UserRoundX } from 'lucide-react'
 import type { User, UserRole } from '../../types/user.types'
 
 type Props = {
@@ -52,7 +52,7 @@ const UserRow = ({ user, onRequestDelete }: Props) => {
             aria-label={`Edit ${user.fullName}`}
             title='Edit user'
           >
-            <Pencil className='h-4 w-4' />
+            <UserRoundPen className='h-4 w-4' />
           </Link>
           <button
             type='button'
@@ -63,7 +63,7 @@ const UserRow = ({ user, onRequestDelete }: Props) => {
             aria-label={`Delete ${user.fullName}`}
             title='Delete user'
           >
-            <Trash2 className='h-4 w-4' />
+            <UserRoundX className='h-4 w-4' />
           </button>
         </div>
       </td>

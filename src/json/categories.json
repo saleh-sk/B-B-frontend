@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Electronics",
+    "type": "Gadgets and Devices"
+  },
+  {
+    "id": 2,
+    "name": "Clothing",
+    "type": "Apparel and Accessories"
+  },
+  {
+    "id": 3,
+    "name": "Home & Kitchen",
+    "type": "Household Items"
+  },
+  {
+    "id": 4,
+    "name": "Books",
+    "type": "Literature and Media"
+  },
+  {
+    "id": 5,
+    "name": "Sports & Outdoors",
+    "type": "Sporting Goods and Outdoor Equipment"
+  },
+  {
+    "id": 6,
+    "name": "Health & Beauty",
+    "type": "Personal Care and Wellness"
+  },
+  {
+    "id": 7,
+    "name": "Toys & Games",
+    "type": "Children's Entertainment"
+  },
+  {
+    "id": 8,
+    "name": "Automotive",
+    "type": "Vehicle Parts and Accessories"
+  },
+  {
+    "id": 9,
+    "name": "Grocery",
+    "type": "Food and Beverages"
+  },
+  {
+    "id": 10,
+    "name": "Office Supplies",
+    "type": "Stationery and Office Equipment"
+  },
+  {
+    "id": 11,
+    "name": "Pet Supplies",
+    "type": "Products for Pets"
+  },
+  {
+    "id": 12,
+    "name": "Garden & Outdoor",
+    "type": "Gardening Tools and Outdoor Furniture"
+  }
+]
