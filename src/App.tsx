@@ -17,7 +17,13 @@ import WarehouseDashboard from './pages/warehouse/WarehouseDashboard'
 import Products from './pages/warehouse/products/Products'
 import AddProduct from './pages/warehouse/products/AddProduct'
 import PendingPricing from './pages/warehouse/PendingPricing'
-import { logisticsSidebarItems, warehouseSidebarItems } from './constants'
+import {
+  financeSidebarItems,
+  logisticsSidebarItems,
+  warehouseSidebarItems,
+} from './constants'
+import PLReports from './pages/finance/PLReports'
+import FinanceDashboard from './pages/finance/FinanceDashboard'
 
 const SectionPage = ({ title }: { title: string }) => {
   return (
@@ -74,10 +80,16 @@ function App() {
             <Route path='pending-pricing' element={<PendingPricing />} />
           </Route>
 
+          <Route
+            path='finance'
+            element={<PageLayout sidebarItems={financeSidebarItems} />}
+          >
+            <Route index element={<FinanceDashboard />} />
+            <Route path='pl-reports' element={<PLReports />} />
+          </Route>
+
           <Route index element={<Home />} />
-          <Route path='finance' element={<SectionPage title='Finance' />} />
           <Route path='boutique' element={<SectionPage title='Boutique' />} />
-          <Route path='warehouse' element={<SectionPage title='Warehouse' />} />
         </Route>
         <Route path='/login' element={<Login />} />
       </Routes>

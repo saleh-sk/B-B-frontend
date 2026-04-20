@@ -1,7 +1,20 @@
 import type { SidebarItem } from '../components/Sidebar'
-import { Users, Tags, Package, BadgeDollarSign } from 'lucide-react'
+import {
+  Users,
+  Tags,
+  Package,
+  BadgeDollarSign,
+  LayoutDashboard,
+  FileText,
+} from 'lucide-react'
 
 export const logisticsSidebarItems: SidebarItem[] = [
+  {
+    label: 'Dashboard',
+    url: '/logistics',
+    type: 'link',
+    icon: LayoutDashboard,
+  },
   {
     label: 'Users',
     type: 'submenu',
@@ -40,6 +53,12 @@ export const logisticsSidebarItems: SidebarItem[] = [
 
 export const warehouseSidebarItems: SidebarItem[] = [
   {
+    label: 'Dashboard',
+    url: '/warehouse',
+    type: 'link',
+    icon: LayoutDashboard,
+  },
+  {
     label: 'Products',
     type: 'submenu',
     icon: Package,
@@ -61,5 +80,20 @@ export const warehouseSidebarItems: SidebarItem[] = [
     url: '/warehouse/pending-pricing',
     type: 'link',
     icon: BadgeDollarSign,
+  },
+]
+
+export const financeSidebarItems: SidebarItem[] = [
+  {
+    label: 'Dashboard',
+    url: '/finance',
+    type: 'link',
+    icon: LayoutDashboard,
+  },
+  {
+    label: 'P&L Reports',
+    url: '/finance/pl-reports',
+    type: 'link',
+    icon: FileText,
   },
 ]
