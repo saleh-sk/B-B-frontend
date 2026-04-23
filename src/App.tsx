@@ -17,26 +17,17 @@ import WarehouseDashboard from './pages/warehouse/WarehouseDashboard'
 import Products from './pages/warehouse/products/Products'
 import AddProduct from './pages/warehouse/products/AddProduct'
 import PendingPricing from './pages/warehouse/PendingPricing'
+import BoutiqueDashboard from './pages/boutique/BoutiqueDashboard'
+import Invoices from './pages/boutique/invoices/Invoices'
+import AddInvoice from './pages/boutique/invoices/AddInvoice'
 import {
+  boutiqueSidebarItems,
   financeSidebarItems,
   logisticsSidebarItems,
   warehouseSidebarItems,
 } from './constants'
 import PLReports from './pages/finance/PLReports'
 import FinanceDashboard from './pages/finance/FinanceDashboard'
-
-const SectionPage = ({ title }: { title: string }) => {
-  return (
-    <section className='flex min-h-[calc(100vh-4.5rem)] items-center justify-center bg-stone-100 px-4 text-stone-900 dark:bg-stone-950 dark:text-stone-100'>
-      <div className='rounded-2xl border border-stone-200 bg-white px-8 py-10 text-center shadow-sm dark:border-stone-800 dark:bg-stone-900'>
-        <h2 className='text-2xl font-semibold'>{title}</h2>
-        <p className='mt-2 text-sm text-stone-500 dark:text-stone-400'>
-          This module is ready for your next implementation step.
-        </p>
-      </div>
-    </section>
-  )
-}
 
 function App() {
   const mode = useAppSelector(state => state.theme.mode)
@@ -50,6 +41,8 @@ function App() {
       <Toaster position='top-right' closeButton />
       <Routes>
         <Route path='/' element={<Layout />}>
+          <Route index element={<Home />} />
+
           <Route
             path='logistics'
             element={<PageLayout sidebarItems={logisticsSidebarItems} />}
@@ -88,9 +81,18 @@ function App() {
             <Route path='pl-reports' element={<PLReports />} />
           </Route>
 
-          <Route index element={<Home />} />
-          <Route path='boutique' element={<SectionPage title='Boutique' />} />
+          <Route
+            path='boutique'
+            element={<PageLayout sidebarItems={boutiqueSidebarItems} />}
+          >
+            <Route index element={<BoutiqueDashboard />} />
+            <Route path='invoices'>
+              <Route index element={<Invoices />} />
+              <Route path='add' element={<AddInvoice />} />
+            </Route>
+          </Route>
         </Route>
+
         <Route path='/login' element={<Login />} />
       </Routes>
     </Suspense>

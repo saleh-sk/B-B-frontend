@@ -76,6 +76,7 @@ const Sidebar = ({ items, logo, className = '' }: SidebarProps) => {
                 <li key={item.label}>
                   <NavLink
                     to={item.url}
+                    end
                     className={({ isActive }) =>
                       `${baseLinkClasses} ${linkStateClasses} ${isActive ? activeLinkClasses : ''}`
                     }
@@ -128,6 +129,7 @@ const Sidebar = ({ items, logo, className = '' }: SidebarProps) => {
                       <li key={`${item.label}-${child.label}`}>
                         <NavLink
                           to={child.url}
+                          end
                           className={({ isActive }) =>
                             `relative flex h-10 items-center rounded-md px-4 text-sm transition
                             ${

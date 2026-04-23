@@ -6,6 +6,7 @@ import {
   BadgeDollarSign,
   LayoutDashboard,
   FileText,
+  ShoppingCart,
 } from 'lucide-react'
 
 export const logisticsSidebarItems: SidebarItem[] = [
@@ -95,5 +96,31 @@ export const financeSidebarItems: SidebarItem[] = [
     url: '/finance/pl-reports',
     type: 'link',
     icon: FileText,
+  },
+]
+
+export const boutiqueSidebarItems: SidebarItem[] = [
+  {
+    label: 'Dashboard',
+    url: '/boutique',
+    type: 'link',
+    icon: LayoutDashboard,
+  },
+  {
+    label: 'Invoices',
+    type: 'submenu',
+    icon: ShoppingCart,
+    children: [
+      {
+        label: 'Manage Invoices',
+        url: '/boutique/invoices',
+        type: 'link',
+      },
+      {
+        label: 'Add Invoice',
+        url: '/boutique/invoices/add',
+        type: 'link',
+      },
+    ],
   },
 ]
